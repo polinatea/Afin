@@ -1,6 +1,8 @@
 import React, {useState,useEffect} from 'react'
-import Control from '../components/EventsControl'
 import ListNote from '../components/ListView'
+import MapNote from '../components/MapView' 
+import SwipeNote from '../components/SwipeView' 
+import "../CSS/EventsControl.css"
 export const NotesListPage = () => {
 
 // //updating state
@@ -25,14 +27,26 @@ export const NotesListPage = () => {
     // django-cors-headers
     // https://github.com/adamchainz/django-cors-headers
     // python -m pip install django-cors-headers
+
+
+    const [active, setActive] = useState("List");
   return (
     <div>
       <div className='control-box'>
-      <Control />
+      <div className='control-field'>
+      <button onClick={()=> setActive("Swipe")}>Swipe</button>
 
+        <button onClick={()=> setActive("List")}>List</button>
+
+        <button onClick={()=> setActive("Map")}>Map</button>
+        </div>
       </div>
-      
-      <ListNote />
+
+
+      {active ==="Swipe" && <SwipeNote />}
+      {active ==="List" && <ListNote />}
+      {active ==="Map" && <MapNote />}
+   
         {/* <div className="notes-list">
           {events.map((event,index)=>(
             //rendering data

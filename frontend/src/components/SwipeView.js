@@ -1,11 +1,11 @@
 import React, {Fragment,useState,useEffect} from 'react'
 
-const MapNote = () =>{
+const SwipeNote = () =>{
     return(
         <div>
-            map
+            swipe
         </div>
     )
 }
 
-export default MapNote
+export default SwipeNote
