@@ -41,12 +41,12 @@ export const NotesListPage = () => {
         <button onClick={()=> setActive("Map")}>Map</button>
         </div>
       </div>
-
-
+      
+      
       {active ==="Swipe" && <SwipeNote />}
       {active ==="List" && <ListNote />}
       {active ==="Map" && <MapNote />}
-   
+      
         {/* <div className="notes-list">
           {events.map((event,index)=>(
             //rendering data

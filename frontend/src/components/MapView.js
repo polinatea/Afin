@@ -138,7 +138,7 @@ class TemplateProvider extends React.Component {
     componentDidMount() {
       this.setState({
         template: this.props.ymaps.templateLayoutFactory.createClass(
-          '<h3>Hello</h3>'
+          '<h3>Сюда нужно вставить значение переменной event, но я пока не знаю как :(</h3>'
         ),
       });
     }
