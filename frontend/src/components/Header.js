@@ -1,14 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from "react-router-dom"
+import "../CSS/Model.css"
 
 const Header = () => {
+
+	const [modal, setModal] = useState(false);
+	const toggleModal = () =>{
+		setModal(!modal)
+	}
+
   return (
+	<div>
     <nav className='nav'>
       <Link to='/' className='site-title'>Afin</Link>
       <ul>
+		<li className="add-event-button">
+		<button className=" border-2 w-14 rounded-md bg-white text-[#005c58] h-8 mr-10" onClick={toggleModal}>+</button>
+		</li>
         <li>
           <Link to='/events'>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" height="1.5rem"><path d="M2.7382812,31.9726562c1.0029297,1.7138672,2.8115234,2.6704102,4.6669922,2.6704102
+          {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" height="1.5rem"><path d="M2.7382812,31.9726562c1.0029297,1.7138672,2.8115234,2.6704102,4.6669922,2.6704102
 	c0.9238281,0,1.8603516-0.2373047,2.7138672-0.7368164c0.9412231-0.550293,1.6484375-1.3467407,2.0999146-2.2578125
 	l12.4873047,3.3024902c-0.1763916,1.534729,0.1150513,3.135498,0.9528198,4.5686035c0,0.0004883,0,0.0004883,0,0.0004883
 	c0.1154785,0.1973877,0.2493896,0.3765259,0.3798218,0.559082L15.1062012,50.9091797
@@ -69,25 +80,43 @@ const Header = () => {
 	C25.8837891,35.9404297,26.7519531,32.6274414,29.3212891,31.1254883z M5.6826172,26.3183594
 	c0.7822266-0.4570312,1.6943359-0.5839844,2.5742188-0.3535156c0.8769531,0.2299805,1.6123047,0.7875977,2.0703125,1.5703125
 	c0.9443359,1.6162109,0.3984375,3.699707-1.2177734,4.6445312C7.4951172,33.125,5.4101562,32.5791016,4.4648438,30.9633789
-	C3.5205078,29.3466797,4.0664062,27.2631836,5.6826172,26.3183594z" stroke="black" stroke-width="2.1"/></svg>
-            <small>Events</small>
+	C3.5205078,29.3466797,4.0664062,27.2631836,5.6826172,26.3183594z" stroke="black" stroke-width="2.1"/></svg> */}
+            <p>Events</p>
           </Link>
           
         </li>
         <li>
           <Link to='/chats'>
-            <i class="fa-regular fa-comment"></i>
-            <small>Chats</small>
+            {/* <i class="fa-regular fa-comment"></i> */}
+            <p>Chats</p>
           </Link>
         </li>
         <li>
           <Link to='/profile'>
-            <i class="fa-regular fa-user"></i>
-              <small>Profile</small>
+            {/* <i class="fa-regular fa-user"></i> */}
+              <p>Profile</p>
+          </Link>
+        </li>
+		<li>
+          <Link to='/login'>
+            {/* <i class="fa-regular fa-user"></i> */}
+              <p>Login</p>
           </Link>
         </li>
       </ul>
       </nav>
+	  {modal &&(
+	  <div className='modal'>
+	  <div className='overlay' onClick={toggleModal}></div>
+		  <div className='modal-content'>
+			  <h2>Hello modal</h2>
+			  <button className='close-modal' onClick={toggleModal}>close</button>
+		  </div>
+	  
+	</div>
+	  )}
+
+	  </div>
   )
 }
 
