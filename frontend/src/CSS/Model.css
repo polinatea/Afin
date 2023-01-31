@@ -31,15 +31,59 @@
     transform: translate(-50%, -50%);
     line-height: 1.4;
     background: #f1f1f1;
-    padding: 14px 28px;
+    padding: 24px 28px;
     border-radius: 3px;
-    max-width: 600px;
+    max-width: 400px;
     min-width: 300px;
 }
+.short-desk{
+    height: 40px;
+}
 
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 7px;
+
+form{
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding-top: 10px;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    gap:4px;
+    margin-top: 10px;
+}
+.submit, .close-modal{
+    width: 50%;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #005c58;
+    color: #fff;
+    font-size: 16px;
+}
+.submit, .close-modal, :focus{
+    cursor: pointer;
+    
+}
+.dateTime-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap:4px;
+    
+}
+.dateTime-container .date,.time{
+    width:50%;
+    
 }

@@ -1,10 +1,18 @@
-/* .control-field{
+.control-field{
     display: flex;
-    gap: 0.1rem;
-    margin-right: 50px;
-    margin-top: 50px;
+    justify-items: center;
+    gap: 4px;
+    padding-top: 52px;
 }
 
 .control-button{
-    background-color: blue;
-} */
+    border-width: 1px;
+    width: 80px;
+    padding: 4px;
+    border-radius: 3px;
+    
+}
+
+
+
+

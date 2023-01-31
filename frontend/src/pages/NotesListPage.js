@@ -3,7 +3,7 @@ import ListNote from '../components/ListView'
 import MapNote from '../components/MapView' 
 import SwipeNote from '../components/SwipeView' 
 import "../CSS/EventsControl.css"
-import "../index.css"
+
 export const NotesListPage = () => {
 
 // //updating state
@@ -35,10 +35,10 @@ export const NotesListPage = () => {
     <div>
       <div className='control-box'>
 
-      <div className='control-field flex justify-center gap-2 pt-14'>
-        <button className="control-button border-2 w-20 p-1" onClick={()=> setActive("Swipe")}>Swipe</button>
-        <button className="control-button border-2 w-20 p-1" onClick={()=> setActive("List")}>List</button>
-        <button className="control-button border-2 w-20 p-1" onClick={()=> setActive("Map")}>Map</button>
+      <div className='control-field'>
+        <button className="control-button " onClick={()=> setActive("Swipe")}>Swipe</button>
+        <button className="control-button " onClick={()=> setActive("List")}>List</button>
+        <button className="control-button" onClick={()=> setActive("Map")}>Map</button>
       </div>
 
       </div>
